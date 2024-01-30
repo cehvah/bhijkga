@@ -24,7 +24,7 @@ chrome_options.add_argument("--no-sandbox")  # Disable sandboxing for Linux
 chrome_options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage for Linux
 
 # Create a Chrome WebDriver instance with configured options
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver', options=chrome_options)
 
 try:
     # Visit github_url
