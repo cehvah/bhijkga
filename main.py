@@ -22,9 +22,10 @@ chrome_options = Options()
 chrome_options.add_argument("--disable-gpu")  # Disable GPU usage
 chrome_options.add_argument("--no-sandbox")  # Disable sandboxing for Linux
 chrome_options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage for Linux
+service = Service(executable_path='/usr/local/bin/chromedriver')
 
 # Create a Chrome WebDriver instance with configured options
-driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver', options=chrome_options)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
     # Visit github_url
