@@ -37,6 +37,8 @@ jobs:
     - uses: browser-actions/setup-chrome@v1
       with:
        chrome-version: '120'
+    - run: |
+       ${{ steps.setup-chrome.outputs.chrome-path }} --version
 
 
     - name: Install dependencies
