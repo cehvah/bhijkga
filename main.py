@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 import time
 import pickle
 import os
@@ -23,9 +24,10 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--disable-dev-shm-usage")
+service = Service(executable_path='/usr/local/bin/chromedriver')
 
 # Create a Chrome WebDriver instance with configured options
-driver = webdriver.Chrome('/usr/local/bin/chromedriver',options=chrome_options)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
     # Visit github_url
